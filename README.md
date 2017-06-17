@@ -3,7 +3,7 @@
 安卓局域网斗地主游戏  
 ## 环境
 Android API>=15  
-## apk文件位置：
+## apk位置
 [app/app-release.apk](https://github.com/eagleoflqj/Landlords/blob/master/app/app-release.apk)
 ## 合作者
 浦鸿铭
