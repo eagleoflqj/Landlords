@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Landlords</string>
+    <string name="new_game">创建游戏</string>
+    <string name="join_game">加入游戏</string>
+    <string name="num_prompt">请输入房间号</string>
+    <string name="name_prompt">我的名字</string>
+    <string name="confirm">确定</string>
+    <string name="back">返回</string>
+    <string name="submit">出牌</string>>
+</resources>
