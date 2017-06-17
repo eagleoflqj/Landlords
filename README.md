@@ -4,7 +4,7 @@
 ## 环境
 Android API>=15  
 ## apk文件位置：
-app/app-release.apk
+[app/app-release.apk](https://github.com/eagleoflqj/Landlords/blob/master/app/app-release.apk)
 ## 合作者
 浦鸿铭
 鄂潇原
