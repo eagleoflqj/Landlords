@@ -10,6 +10,7 @@ import android.widget.EditText;
 public class StartGameActivity extends Activity
 {
 	String name;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -19,28 +20,19 @@ public class StartGameActivity extends Activity
 
 	public void newGame(View view)
 	{
-		name=((EditText)findViewById(R.id.edt_name)).getText().toString();
-		if(name.contains(","))
+		name = ((EditText) findViewById(R.id.edt_name)).getText().toString();
+		if (name.contains(","))
 		{
 			new AlertDialog.Builder(this).setTitle("提示").setMessage("名称不能带\",\"").setPositiveButton("确定", null).show();
 			return;
 		}
-		Intent intent = new Intent(this, GameActivity.class);
-		intent.putExtra("name",name);
-		intent.putExtra("isServer",true);
-		startActivity(intent);
-	}
-
-	public void joinGame(View view)
-	{
-		name=((EditText)findViewById(R.id.edt_name)).getText().toString();
-		if(name.contains(","))
+		boolean isServer = view == findViewById(R.id.btn_new);
+		Intent intent = new Intent(this, isServer ? GameActivity.class : InputNumberActivity.class);
+		intent.putExtra("name", name);
+		if (isServer)
 		{
-			new AlertDialog.Builder(this).setTitle("提示").setMessage("名称不能带\",\"").setPositiveButton("确定", null).show();
-			return;
+			intent.putExtra("isServer", true);
 		}
-		Intent intent = new Intent(this, InputNumberActivity.class);
-		intent.putExtra("name",name);
 		startActivity(intent);
 	}
 }
