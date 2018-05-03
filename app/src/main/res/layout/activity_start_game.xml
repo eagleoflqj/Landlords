@@ -1,39 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context="com.liumeo.landlords.StartGameActivity"
-                android:background="@drawable/background">
 
-    <LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:background="@drawable/background"
+              android:orientation="horizontal"
+              android:gravity="center"
+              tools:context="com.liumeo.landlords.StartGameActivity">
+
+    <EditText
+        android:id="@+id/edt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="horizontal">
+        android:ems="6"
+        android:hint="@string/name_prompt"
+        android:maxLines="1"/>
 
-        <EditText
-            android:id="@+id/edt_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="6"
-            android:hint="@string/name_prompt"
-            android:maxLines="1"/>
+    <Button
+        android:id="@+id/btn_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:onClick="newGame"
+        android:text="@string/new_game"/>
 
-        <Button
-            android:id="@+id/btn_new"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:onClick="newGame"
-            android:text="@string/new_game"/>
-
-        <Button
-            android:id="@+id/btn_join"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:onClick="newGame"
-            android:text="@string/join_game"/>
-    </LinearLayout>
-</RelativeLayout>
+    <Button
+        android:id="@+id/btn_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:onClick="newGame"
+        android:text="@string/join_game"/>
+</LinearLayout>
